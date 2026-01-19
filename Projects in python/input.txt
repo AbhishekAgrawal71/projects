@@ -1,3 +1,0 @@
-Hello world! This is a test file for the word frequency counter.
-Python is a great language for data analysis and visualization.
-The word cloud feature is fun to use!
