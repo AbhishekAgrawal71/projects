@@ -1,0 +1,1 @@
+if( word.lower() in ["jarvis","jarviss","jarves","jar-vis","jarv-is","jervis","jarvas"]):
