@@ -6,7 +6,6 @@ import music_library
 import requests
 
 engine=pyttsx3.init()
-
 def speak(text):
     engine.say(text)
     engine.runAndWait()
@@ -31,7 +30,7 @@ def processcommand(c):
         speak("Here are the top headlines")
 
         response = requests.get(
-            "https://newsapi.org/v2/top-headlines?country=in&apiKey=YOUR_API_KEY"
+            "https://newsapi.org/v2/top-headlines?country=in&apiKey=bf54689c41a241a6853572d420790d64"
         )
 
         if response.status_code == 200:
@@ -42,6 +41,10 @@ def processcommand(c):
                     speak(title)
         else:
             speak("Sorry, I could not fetch the news")
+    else:
+        word=c.lower().split(" ")[1]
+        search_url = f"https://www.google.com/search?q={word}"
+        webbrowser.open(search_url)
 
 
 if __name__=="__main__":
